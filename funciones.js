@@ -18,7 +18,7 @@ nuevoContacto(2,'Juana Griselda', 'Gomez Discua', 89554577, 'Comayagua', 'Frente
 eliminarContacto(contacto);
 function nuevoContacto(id, nombres, apellidos, telefono,ciudad,direccion)
 {
-    let nuevo={//funsion
+    let nuevo={
         id:id,
         nombres:nombres,
         apellidos:apellidos,
@@ -66,7 +66,7 @@ function imprimir(misContactos, mostrarEncabezado)
         console.log("      b." + misContactos[i].ubicaciones.direccion);
         
         console.log(' ');
-       // console.log(contacto[i]);
+      
 
     }  
 }
