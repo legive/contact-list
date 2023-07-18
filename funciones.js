@@ -57,16 +57,32 @@ function imprimir(misContactos, mostrarEncabezado)
     for(let i=0;i<=misContactos.length-1;i++)
     {
         console.log("Contacto No." + (i+1));
-        console.log("1. " + "id= " + contacto[i].id);
-        console.log("2. " + "Nombres= " + contacto[i].nombres);
-        console.log("3. " + "Apellidos= " + contacto[i].apellidos);
-        console.log("4. " + "Teléfono= " + contacto[i].telefono);
+        console.log("1. " + "id= " + misContactos[i].id);
+        console.log("2. " + "Nombres= " + misContactos[i].nombres);
+        console.log("3. " + "Apellidos= " + misContactos[i].apellidos);
+        console.log("4. " + "Teléfono= " + misContactos[i].telefono);
         console.log("5. " + "Ubicaciones ");
-        console.log("      a." + contacto[i].ubicaciones.ciudad);
-        console.log("      b." + contacto[i].ubicaciones.direccion);
+        console.log("      a." + misContactos[i].ubicaciones.ciudad);
+        console.log("      b." + misContactos[i].ubicaciones.direccion);
         
         console.log(' ');
        // console.log(contacto[i]);
 
     }  
 }
+
+
+
+    actualizarContacto(2, 'Maria');
+
+
+
+function actualizarContacto(id, nombres)
+{
+    indice=contacto.findIndex(caracteristica =>caracteristica.id == id);
+       contacto[indice].nombres=nombres;
+    
+    
+      console.log("**********Actualiza un contacto**********"); 
+      imprimir(contacto, false);
+   }
