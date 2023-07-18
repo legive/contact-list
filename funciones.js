@@ -81,8 +81,9 @@ function actualizarContacto(id, nombres)
 {
     indice=contacto.findIndex(caracteristica =>caracteristica.id == id);
        contacto[indice].nombres=nombres;
-    
-    
+      
       console.log("**********Actualiza un contacto**********"); 
       imprimir(contacto, false);
    }
+
+   
